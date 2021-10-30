@@ -14,4 +14,4 @@ if ! [[ $TOR_INSTANCE_COUNT =~ $re ]] ; then
 fi
 
 
-multitor --init $TOR_INSTANCE_COUNT --user root --socks-port 9000 --control-port 9900 --proxy privoxy --verbose --debug > /var/log/multitor.log; tail -f /var/log/multitor.log
+multitor --init $TOR_INSTANCE_COUNT --user root --socks-port 9000 --control-port 9900 --proxy privoxy --haproxy --verbose --debug > /var/log/multitor.log; tail -f /var/log/multitor.log
